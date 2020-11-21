@@ -29,3 +29,13 @@ then
 else
 	echo "no"
 fi
+
+
+read -p "enter password format:" password
+passwordpat="^(?=.{8,}$)(?=.*\d)(?=.*[A-Z])[a-zA-Z0-9]*[\@\#\$\&\^][a-zA-Z0-9]*$"
+if (( $password == $passwordpat ))
+then
+	echo "yes"
+else
+	echo "no"
+fi
